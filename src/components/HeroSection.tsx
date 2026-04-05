@@ -2,39 +2,78 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-const HeroSection = () => {
-  return (
-    <section className="relative min-h-screen grid-bg flex items-center justify-center overflow-hidden">
-      {/* Radial glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+const wordReveal = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.04 },
+  },
+};
 
+const wordChild = {
+  hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.5, ease: [0.25, 0.4, 0.25, 1] },
+  },
+};
+
+const fadeUp = (delay = 0) => ({
+  hidden: { opacity: 0, y: 16 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, delay, ease: [0.25, 0.4, 0.25, 1] },
+  },
+});
+
+const HeroSection = () => {
+  const headlineWords = "Your sportsbook deserves world-class design.".split(" ");
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Subtle radial glow */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/[0.04] blur-[150px] pointer-events-none" />
+      
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-32">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+        <motion.p
+          className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-10 font-light"
+          variants={fadeUp(0)}
+          initial="hidden"
+          animate="visible"
         >
-          <p className="font-body text-sm tracking-[0.3em] uppercase text-muted-foreground mb-8">
-            Exclusive B2B Design Partner for Sportsbooks
-          </p>
-        </motion.div>
+          Exclusive B2B Design Partner for Sportsbooks
+        </motion.p>
 
         <motion.h1
-          className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight mb-8"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.08] tracking-[-0.035em] font-medium mb-8"
+          variants={wordReveal}
+          initial="hidden"
+          animate="visible"
         >
-          Your sportsbook deserves{" "}
-          <em className="text-primary">world-class</em>{" "}
-          design. 🎯
+          {headlineWords.map((word, i) => (
+            <motion.span
+              key={i}
+              variants={wordChild}
+              className={`inline-block mr-[0.3em] ${
+                word === "world-class" ? "text-primary" : ""
+              }`}
+              style={word === "world-class" ? { fontStyle: "italic" } : {}}
+            >
+              {word}
+            </motion.span>
+          ))}
+          <motion.span variants={wordChild} className="inline-block">
+            🎯
+          </motion.span>
         </motion.h1>
 
         <motion.p
-          className="font-body text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.35 }}
+          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed font-light"
+          variants={fadeUp(0.5)}
+          initial="hidden"
+          animate="visible"
         >
           Senior-quality product design on a flexible monthly retainer.
           No hiring. No overhead. Just premium output — delivered in days, not months. ⚡
@@ -42,32 +81,39 @@ const HeroSection = () => {
 
         <motion.div
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.55 }}
+          variants={fadeUp(0.7)}
+          initial="hidden"
+          animate="visible"
         >
-          <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 py-6 rounded-full font-body font-medium">
+          <Button
+            size="lg"
+            className="bg-foreground text-background hover:bg-foreground/90 text-sm px-7 py-6 rounded-full font-medium tracking-[-0.01em]"
+          >
             Book a call
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button variant="outline" size="lg" className="border-border text-foreground hover:bg-secondary text-base px-8 py-6 rounded-full font-body font-medium">
+          <Button
+            variant="outline"
+            size="lg"
+            className="border-border text-muted-foreground hover:text-foreground hover:bg-secondary text-sm px-7 py-6 rounded-full font-medium tracking-[-0.01em]"
+          >
             See our work
           </Button>
         </motion.div>
 
         <motion.div
-          className="mt-20 flex items-center justify-center gap-8 text-muted-foreground font-body text-sm"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-24 flex items-center justify-center gap-8 text-muted-foreground text-sm font-light"
+          variants={fadeUp(0.9)}
+          initial="hidden"
+          animate="visible"
         >
           <span className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             15 years in sports betting
           </span>
-          <span className="hidden sm:inline text-border">|</span>
+          <span className="hidden sm:inline text-border/50">|</span>
           <span className="hidden sm:inline">30+ years combined experience</span>
-          <span className="hidden sm:inline text-border">|</span>
+          <span className="hidden sm:inline text-border/50">|</span>
           <span className="hidden sm:inline">Trusted by operators worldwide 🌍</span>
         </motion.div>
       </div>
@@ -75,12 +121,18 @@ const HeroSection = () => {
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.4 }}
+        transition={{ delay: 1.5 }}
       >
-        <div className="w-5 h-8 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-1">
-          <div className="w-1 h-2 rounded-full bg-muted-foreground/50" />
-        </div>
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <div className="w-5 h-8 rounded-full border border-muted-foreground/20 flex items-start justify-center p-1.5">
+            <div className="w-0.5 h-1.5 rounded-full bg-muted-foreground/40" />
+          </div>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -34,54 +34,49 @@ const features = [
   },
 ];
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: i * 0.1, ease: "easeOut" },
-  }),
-};
-
 const FeaturesSection = () => {
   return (
     <section className="relative py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-20"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl leading-tight mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.035em] font-medium mb-6">
             Amplified with{" "}
-            <em className="text-primary">modern</em> capabilities
+            <span className="text-gradient-subtle">modern</span> capabilities
           </h2>
-          <p className="font-body text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-light leading-relaxed">
             Everything a scaling sportsbook needs from a design partner —
             domain expertise, speed, and zero overhead.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border/50 rounded-2xl overflow-hidden border border-border/50">
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
-              custom={i}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-primary/30 transition-colors duration-300"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{
+                duration: 0.5,
+                delay: i * 0.06,
+                ease: [0.25, 0.4, 0.25, 1],
+              }}
+              className="group relative bg-background p-8 hover:bg-card transition-colors duration-300"
             >
-              <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative">
-                <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-6">
-                  <feature.icon className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center mb-5">
+                  <feature.icon className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
                 </div>
-                <h3 className="font-display text-xl mb-3">{feature.title}</h3>
-                <p className="font-body text-muted-foreground text-sm leading-relaxed">
+                <h3 className="text-base font-medium tracking-[-0.01em] mb-2.5">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed font-light">
                   {feature.description}
                 </p>
               </div>
