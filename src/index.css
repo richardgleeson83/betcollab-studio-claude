@@ -15,7 +15,7 @@
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 93%;
 
-    --primary: 152 60% 48%;
+    --primary: 45 93% 47%;
     --primary-foreground: 0 0% 4%;
 
     --secondary: 0 0% 10%;
@@ -24,7 +24,7 @@
     --muted: 0 0% 10%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 152 60% 48%;
+    --accent: 45 93% 47%;
     --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
@@ -32,11 +32,11 @@
 
     --border: 0 0% 12%;
     --input: 0 0% 12%;
-    --ring: 152 60% 48%;
+    --ring: 45 93% 47%;
 
     --radius: 0.75rem;
 
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
 
     --grid-color: 0 0% 8%;
   }
@@ -85,7 +85,6 @@
   box-shadow: 0 0 80px -20px hsl(var(--primary) / 0.15);
 }
 
-/* Linear-style subtle top border glow */
 .border-glow {
   position: relative;
 }
