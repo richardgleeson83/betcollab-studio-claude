@@ -12,11 +12,10 @@ export default {
         "2xl": "1400px",
       },
     },
-    fontFamily: {
-        display: ['DM Serif Display', 'serif'],
-        body: ['Inter', 'sans-serif'],
+    extend: {
+      fontFamily: {
+        body: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
-      extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -69,20 +68,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {

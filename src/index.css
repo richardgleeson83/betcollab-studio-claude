@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,40 +6,39 @@
 
 @layer base {
   :root {
-    --background: 220 14% 6%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 93%;
 
-    --card: 220 12% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 93%;
 
-    --popover: 220 12% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 93%;
 
     --primary: 152 60% 48%;
-    --primary-foreground: 220 14% 6%;
+    --primary-foreground: 0 0% 4%;
 
-    --secondary: 220 10% 16%;
-    --secondary-foreground: 0 0% 75%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 60%;
 
-    --muted: 220 10% 16%;
-    --muted-foreground: 0 0% 50%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 45%;
 
     --accent: 152 60% 48%;
-    --accent-foreground: 220 14% 6%;
+    --accent-foreground: 0 0% 4%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 10% 18%;
-    --input: 220 10% 18%;
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
     --ring: 152 60% 48%;
 
     --radius: 0.75rem;
 
-    --font-display: 'DM Serif Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 
-    --grid-color: 220 10% 12%;
+    --grid-color: 0 0% 8%;
   }
 }
 
@@ -51,10 +50,13 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-display);
+    font-family: var(--font-body);
+    letter-spacing: -0.03em;
   }
 }
 
@@ -66,12 +68,33 @@
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--muted-foreground)));
+  background: linear-gradient(180deg, hsl(0 0% 93%), hsl(0 0% 45%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-subtle {
+  background: linear-gradient(180deg, hsl(0 0% 80%), hsl(0 0% 40%));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .glow-accent {
-  box-shadow: 0 0 80px -20px hsl(var(--primary) / 0.2);
+  box-shadow: 0 0 80px -20px hsl(var(--primary) / 0.15);
+}
+
+/* Linear-style subtle top border glow */
+.border-glow {
+  position: relative;
+}
+.border-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), transparent);
 }
