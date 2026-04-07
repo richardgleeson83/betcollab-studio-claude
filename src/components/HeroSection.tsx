@@ -92,13 +92,6 @@ const HeroSection = () => {
             Book a call
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-border text-muted-foreground hover:text-foreground hover:bg-secondary text-sm px-7 py-6 rounded-full font-medium tracking-[-0.01em]"
-          >
-            See our work
-          </Button>
         </motion.div>
 
         <motion.div
