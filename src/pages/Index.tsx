@@ -4,6 +4,7 @@ import FeaturesSection from "@/components/FeaturesSection";
 import ShowcaseSection from "@/components/ShowcaseSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import FooterSection from "@/components/FooterSection";
+import CTASection from "@/components/CTASection";
 
 const Index = () => {
   return (
