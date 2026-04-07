@@ -18,6 +18,9 @@ const Index = () => {
       <div id="proof">
         <SocialProofSection />
       </div>
+      <div id="contact">
+        <CTASection />
+      </div>
       <FooterSection />
     </div>
   );
