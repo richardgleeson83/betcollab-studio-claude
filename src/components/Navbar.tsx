@@ -9,8 +9,9 @@ const Navbar = () => {
   const location = useLocation();
 
   const handleBookCall = () => {
-    if (location.pathname === "/") {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    const contactEl = document.getElementById("contact");
+    if (contactEl) {
+      contactEl.scrollIntoView({ behavior: "smooth" });
     } else {
       navigate("/#contact");
     }
