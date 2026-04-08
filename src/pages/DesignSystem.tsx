@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import showcaseImage from "@/assets/betcollab-system-2.png";
 import FooterSection from "@/components/FooterSection";
+import ComponentShowcase from "@/components/ComponentShowcase";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -171,6 +172,8 @@ const DesignSystem = () => {
           />
         </motion.div>
       </section>
+
+      <ComponentShowcase />
 
       {/* Capabilities */}
       <section className="px-6 py-16">
