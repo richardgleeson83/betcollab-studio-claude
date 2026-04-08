@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
+import showcaseImage from "@/assets/betcollab-system-2.png";
 import FooterSection from "@/components/FooterSection";
 
 const fadeUp = {
@@ -150,6 +151,24 @@ const DesignSystem = () => {
               enabling faster, more consistent betting UX without repetitive design work.
             </span>
           </h2>
+        </motion.div>
+      </section>
+
+      {/* Showcase Image */}
+      <section className="px-6 py-8">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-6xl mx-auto"
+        >
+          <img
+            src={showcaseImage}
+            alt="betCollab design system themed sportsbook examples showing different partner configurations"
+            className="w-full rounded-2xl border border-border/50"
+          />
         </motion.div>
       </section>
 
