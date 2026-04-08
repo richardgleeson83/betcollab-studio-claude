@@ -299,6 +299,25 @@ const DesignSystem = () => {
         </div>
       </section>
 
+      <section id="contact" className="py-24 px-6">
+        <motion.div
+          className="max-w-2xl mx-auto text-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold tracking-tight mb-4">Ready to get started?</h2>
+          <p className="text-muted-foreground mb-8">Book a call to discuss your project and find the right plan for your sportsbook.</p>
+          <Button asChild className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8">
+            <a href="https://betcollab.com/#contact" target="_blank" rel="noopener noreferrer">
+              Book a call
+            </a>
+          </Button>
+        </motion.div>
+      </section>
+
       <FooterSection />
     </div>
   );
