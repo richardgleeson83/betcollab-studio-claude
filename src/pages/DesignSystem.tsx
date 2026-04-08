@@ -154,6 +154,24 @@ const DesignSystem = () => {
         </motion.div>
       </section>
 
+      {/* Showcase Image */}
+      <section className="px-6 py-8">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-6xl mx-auto"
+        >
+          <img
+            src={showcaseImage}
+            alt="betCollab design system themed sportsbook examples showing different partner configurations"
+            className="w-full rounded-2xl border border-border/50"
+          />
+        </motion.div>
+      </section>
+
       {/* Capabilities */}
       <section className="px-6 py-16">
         <div className="max-w-6xl mx-auto">
