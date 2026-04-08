@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
+import showcaseImage from "@/assets/betcollab-system-2.png";
 import FooterSection from "@/components/FooterSection";
 
 const fadeUp = {
