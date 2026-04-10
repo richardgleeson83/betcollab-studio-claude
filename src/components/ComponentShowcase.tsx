@@ -8,9 +8,8 @@ import showcaseEventGrid from "@/assets/showcase-event-grid.png";
 import showcaseNextRace from "@/assets/showcase-next-race.png";
 
 const sideCards = [
-  { src: showcaseSidebar, alt: "Sports navigation sidebar", delay: 0.15 },
-  { src: showcaseAcca, alt: "Accumulator bet card", delay: 0.25 },
-  { src: showcaseNextRace, alt: "Horse racing next race carousel", delay: 0.35 },
+  { src: showcaseAcca, alt: "Accumulator bet card", delay: 0.15 },
+  { src: showcaseNextRace, alt: "Horse racing next race carousel", delay: 0.25 },
 ];
 
 const rightCards = [
