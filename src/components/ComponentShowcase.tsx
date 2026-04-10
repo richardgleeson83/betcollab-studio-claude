@@ -15,7 +15,6 @@ const sideCards = [
 const rightCards = [
   { src: showcaseBetBoost, alt: "Bet boost promotion card", delay: 0.2 },
   { src: showcaseBetBuilder, alt: "Bet builder selection card", delay: 0.3 },
-  { src: showcaseEventGrid, alt: "Premier League event grid with odds", delay: 0.4 },
 ];
 
 const CardItem = ({ src, alt, delay }: { src: string; alt: string; delay: number }) => (
