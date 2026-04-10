@@ -7,57 +7,33 @@ import showcaseBetBuilder from "@/assets/showcase-bet-builder.png";
 import showcaseEventGrid from "@/assets/showcase-event-grid.png";
 import showcaseNextRace from "@/assets/showcase-next-race.png";
 
-const floatingCards = [
-  {
-    src: showcaseHome,
-    alt: "Sportsbook homepage with featured matches and navigation",
-    className: "w-[48%] z-20",
-    style: { top: "8%", left: "50%", transform: "translateX(-50%) rotate(-1deg)" },
-    delay: 0.1,
-  },
-  {
-    src: showcaseSidebar,
-    alt: "Sports navigation sidebar",
-    className: "w-[16%] z-30",
-    style: { top: "4%", left: "2%", transform: "rotate(-3deg)" },
-    delay: 0.2,
-  },
-  {
-    src: showcaseAcca,
-    alt: "Accumulator bet card",
-    className: "w-[22%] z-30",
-    style: { bottom: "4%", left: "2%", transform: "rotate(2deg)" },
-    delay: 0.3,
-  },
-  {
-    src: showcaseBetBoost,
-    alt: "Bet boost promotion card",
-    className: "w-[22%] z-30",
-    style: { top: "2%", right: "2%", transform: "rotate(2deg)" },
-    delay: 0.25,
-  },
-  {
-    src: showcaseBetBuilder,
-    alt: "Bet builder selection card",
-    className: "w-[24%] z-30",
-    style: { bottom: "6%", right: "1%", transform: "rotate(-2deg)" },
-    delay: 0.35,
-  },
-  {
-    src: showcaseEventGrid,
-    alt: "Premier League event grid with odds",
-    className: "w-[44%] z-10",
-    style: { bottom: "-2%", left: "50%", transform: "translateX(-50%) rotate(1deg)" },
-    delay: 0.15,
-  },
-  {
-    src: showcaseNextRace,
-    alt: "Horse racing next race carousel",
-    className: "w-[34%] z-10",
-    style: { top: "50%", right: "5%", transform: "translateY(-50%) rotate(-1.5deg)" },
-    delay: 0.4,
-  },
+const sideCards = [
+  { src: showcaseSidebar, alt: "Sports navigation sidebar", delay: 0.15 },
+  { src: showcaseAcca, alt: "Accumulator bet card", delay: 0.25 },
+  { src: showcaseNextRace, alt: "Horse racing next race carousel", delay: 0.35 },
 ];
+
+const rightCards = [
+  { src: showcaseBetBoost, alt: "Bet boost promotion card", delay: 0.2 },
+  { src: showcaseBetBuilder, alt: "Bet builder selection card", delay: 0.3 },
+  { src: showcaseEventGrid, alt: "Premier League event grid with odds", delay: 0.4 },
+];
+
+const CardItem = ({ src, alt, delay }: { src: string; alt: string; delay: number }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 24 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-80px" }}
+    transition={{ duration: 0.6, delay, ease: [0.25, 0.4, 0.25, 1] }}
+  >
+    <img
+      src={src}
+      alt={alt}
+      className="w-full rounded-xl border border-border/30 shadow-lg shadow-black/30"
+      loading="lazy"
+    />
+  </motion.div>
+);
 
 const ComponentShowcase = () => {
   return (
@@ -91,32 +67,45 @@ const ComponentShowcase = () => {
           From sidebars and event grids to bet builders and accumulators — every component your sportsbook needs.
         </motion.p>
 
-        {/* Floating cards composition */}
-        <div className="relative w-full aspect-[16/10] max-w-5xl mx-auto">
-          {/* Subtle radial glow behind the composition */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.06)_0%,transparent_70%)]" />
+        {/* Three-column grid: left stack | center hero | right stack */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-5 items-center max-w-5xl mx-auto">
+          {/* Left column */}
+          <div className="hidden lg:flex flex-col gap-5">
+            {sideCards.map((card) => (
+              <CardItem key={card.alt} {...card} />
+            ))}
+          </div>
 
-          {floatingCards.map((card, i) => (
-            <motion.div
-              key={i}
-              className={`absolute ${card.className}`}
-              style={card.style}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{
-                duration: 0.7,
-                delay: card.delay,
-                ease: [0.25, 0.4, 0.25, 1],
-              }}
-            >
-              <img
-                src={card.src}
-                alt={card.alt}
-                className="w-full rounded-xl shadow-2xl shadow-black/40 border border-border/30"
-              />
-            </motion.div>
-          ))}
+          {/* Center — hero screenshot */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
+            className="relative"
+          >
+            <div className="absolute -inset-8 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08)_0%,transparent_70%)] pointer-events-none" />
+            <img
+              src={showcaseHome}
+              alt="Sportsbook homepage with featured matches and navigation"
+              className="relative w-full rounded-2xl border border-border/40 shadow-2xl shadow-black/50"
+              loading="lazy"
+            />
+          </motion.div>
+
+          {/* Right column */}
+          <div className="hidden lg:flex flex-col gap-5">
+            {rightCards.map((card) => (
+              <CardItem key={card.alt} {...card} />
+            ))}
+          </div>
+
+          {/* Mobile: show all cards in a 2-col grid */}
+          <div className="lg:hidden grid grid-cols-2 gap-4 mt-4">
+            {[...sideCards, ...rightCards].map((card) => (
+              <CardItem key={card.alt} {...card} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
