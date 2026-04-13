@@ -5,17 +5,6 @@ import logo from "@/assets/betcollab-logo.svg";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleBookCall = () => {
-    const contactEl = document.getElementById("contact");
-    if (contactEl) {
-      contactEl.scrollIntoView({ behavior: "smooth" });
-    } else {
-      navigate("/#contact");
-    }
-  };
 
   return (
     <motion.nav
