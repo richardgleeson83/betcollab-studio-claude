@@ -34,12 +34,12 @@ const CTASection = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground mb-4">
               Ready to elevate your
               <br />
               <span className="text-primary">sportsbook experience?</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 max-w-md">
+            <p className="text-muted-foreground text-lg mb-8 max-w-md font-light leading-relaxed">
               Get in touch and we'll show you how betCollab can transform your platform.
             </p>
             <ul className="space-y-3">

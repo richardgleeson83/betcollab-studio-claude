@@ -100,10 +100,10 @@ const DesignSystem = () => {
           <span className="inline-block mb-6 text-sm text-primary border border-primary/20 rounded-full px-4 py-1.5">
             🎉 betCollab V1.0 now available
           </span>
-          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight text-foreground mb-6">
+          <h1 className="text-4xl md:text-6xl font-medium tracking-[-0.035em] text-foreground mb-6">
             The Most Complete Design System for Sportsbooks
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 font-light leading-relaxed">
             The professional Figma design system for sportsbook web and mobile apps, built to help teams create consistent, high-quality betting experiences faster.
           </p>
           <div className="flex items-center justify-center gap-4">
@@ -144,7 +144,7 @@ const DesignSystem = () => {
           transition={{ duration: 0.7 }}
           className="max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-muted-foreground leading-relaxed">
+          <h2 className="text-2xl md:text-3xl font-medium tracking-[-0.035em] text-muted-foreground leading-relaxed">
             betCollab is built for{" "}
             <span className="text-foreground">⚽ independent sportsbooks,</span>{" "}
             <span className="text-foreground">🏢 operators, and 🚀 enterprise platforms,</span>{" "}
@@ -194,7 +194,7 @@ const DesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-center mb-12"
+            className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground text-center mb-12"
           >
             Unmatched Versatility
           </motion.h2>
@@ -237,7 +237,7 @@ const DesignSystem = () => {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground text-center mb-3"
+            className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground text-center mb-3"
           >
             Choose what works for you
           </motion.h2>
@@ -267,9 +267,9 @@ const DesignSystem = () => {
                     : "border-border/50"
                 }`}
               >
-                <h3 className="text-xl font-semibold text-foreground">{plan.name}</h3>
+                <h3 className="text-xl font-medium text-foreground">{plan.name}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{plan.audience}</p>
-                <p className="text-4xl font-semibold text-foreground mt-6 mb-6">{plan.price}</p>
+                <p className="text-4xl font-medium tracking-[-0.03em] text-foreground mt-6 mb-6">{plan.price}</p>
 
                 <div className="border-t border-border/50 pt-6 flex-1">
                   <ul className="space-y-3">
@@ -330,8 +330,8 @@ const DesignSystem = () => {
           variants={fadeUp}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold tracking-tight mb-4">Ready to get started?</h2>
-          <p className="text-muted-foreground mb-8">Book a call to discuss your project and find the right plan for your sportsbook.</p>
+          <h2 className="text-3xl md:text-4xl font-medium tracking-[-0.035em] mb-4">Ready to get started?</h2>
+          <p className="text-muted-foreground mb-8 font-light leading-relaxed">Book a call to discuss your project and find the right plan for your sportsbook.</p>
           <Button asChild className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8">
             <a href="https://betcollab.com/#contact" target="_blank" rel="noopener noreferrer">
               Book a call
