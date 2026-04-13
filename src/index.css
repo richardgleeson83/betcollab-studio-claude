@@ -6,23 +6,23 @@
 
 @layer base {
   :root {
-    --background: 228 10% 10%;
-    --foreground: 0 0% 93%;
+    --background: 225 10% 11%;
+    --foreground: 220 10% 90%;
 
-    --card: 228 10% 10%;
-    --card-foreground: 0 0% 93%;
+    --card: 225 9% 13%;
+    --card-foreground: 220 10% 90%;
 
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 93%;
+    --popover: 225 9% 13%;
+    --popover-foreground: 220 10% 90%;
 
     --primary: 45 93% 47%;
     --primary-foreground: 0 0% 4%;
 
-    --secondary: 228 8% 13%;
-    --secondary-foreground: 0 0% 60%;
+    --secondary: 225 8% 16%;
+    --secondary-foreground: 220 8% 60%;
 
-    --muted: 228 8% 13%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 225 8% 16%;
+    --muted-foreground: 220 6% 50%;
 
     --accent: 45 93% 47%;
     --accent-foreground: 0 0% 4%;
@@ -30,15 +30,15 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 228 8% 16%;
-    --input: 228 8% 16%;
+    --border: 225 7% 18%;
+    --input: 225 7% 18%;
     --ring: 45 93% 47%;
 
     --radius: 0.75rem;
 
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
 
-    --grid-color: 0 0% 8%;
+    --grid-color: 225 8% 14%;
   }
 }
 
