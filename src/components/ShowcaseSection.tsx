@@ -5,7 +5,7 @@ const ShowcaseSection = () => {
   return (
     <section className="relative px-6 pb-8 pt-16">
       {/* Subtle top glow matching Linear's style */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-primary/[0.06] blur-[120px] pointer-events-none" />
+      
 
       <motion.div
         className="relative max-w-6xl mx-auto"
