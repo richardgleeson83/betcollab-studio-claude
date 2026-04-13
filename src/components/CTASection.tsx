@@ -23,7 +23,7 @@ const CTASection = () => {
 
   return (
     <section className="relative px-6 py-24 md:py-32">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[250px] rounded-full bg-primary/[0.05] blur-[100px] pointer-events-none" />
+      
 
       <div className="relative max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
