@@ -29,8 +29,8 @@ const features = [
   },
   {
     icon: Layers,
-    title: "Team Multiplier",
-    description: "Senior-level oversight and standard-setting that unlocks your junior designers' velocity and elevates your entire team. 🚀",
+    title: "Design Expertise",
+    description: "Figma mastery, and AI-accelerated workflows that delivers production-ready interfaces. 🚀",
   },
 ];
 
