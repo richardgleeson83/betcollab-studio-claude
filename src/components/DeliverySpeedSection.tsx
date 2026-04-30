@@ -23,7 +23,7 @@ const DeliverySpeedSection = () => {
             72-Hour Delivery, Every Time
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
-            Get production-ready iGaming design in days. No onboarding. No ramp-up. No waiting.
+            Get <span className="text-gradient-subtle">production-ready</span> iGaming design in <span className="text-gradient-subtle">days</span>. No onboarding. No ramp-up. No waiting.
           </h2>
           <p className="text-muted-foreground text-lg font-light leading-relaxed mb-6">
             We've been designing sportsbook and casino interfaces for 15 years. Add AI-enhanced workflows and you get a design partner that moves faster than any traditional agency or in-house team.
