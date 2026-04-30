@@ -75,7 +75,7 @@ const HeroSection = () => {
           initial="hidden"
           animate="visible"
         >
-          Senior-quality product design on a flexible monthly retainer.
+          Senior-quality design on a flexible monthly retainer.
           No hiring. No overhead. Just premium output — delivered in days, not months. ⚡
         </motion.p>
 
