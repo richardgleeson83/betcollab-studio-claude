@@ -87,7 +87,7 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="bg-foreground text-background hover:bg-foreground/90 text-sm px-7 py-6 rounded-full font-medium tracking-[-0.01em]"
+            className="bg-primary text-background text-sm px-7 py-6 rounded-full font-medium tracking-[-0.01em]"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Book a call
