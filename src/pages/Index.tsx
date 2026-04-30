@@ -5,6 +5,7 @@ import ShowcaseSection from "@/components/ShowcaseSection";
 import SocialProofSection from "@/components/SocialProofSection";
 import SportsbookExpertiseSection from "@/components/SportsbookExpertiseSection";
 import SkipHiringSection from "@/components/SkipHiringSection";
+import DeliverySpeedSection from "@/components/DeliverySpeedSection";
 import FooterSection from "@/components/FooterSection";
 import CTASection from "@/components/CTASection";
 
@@ -18,6 +19,7 @@ const Index = () => {
       </div>
       <ShowcaseSection />
       <SportsbookExpertiseSection />
+      <DeliverySpeedSection />
       <SkipHiringSection />
       <div id="proof">
         <SocialProofSection />
