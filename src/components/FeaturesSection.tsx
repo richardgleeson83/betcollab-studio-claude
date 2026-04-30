@@ -19,7 +19,7 @@ const features = [
   },
   {
     icon: Clock,
-    title: "15 Years Deep",
+    title: "15 Years in iGaming",
     description: "Domain expertise that spans the entire sports betting ecosystem — from pre-match to live, from retail to mobile. 🏆",
   },
   {

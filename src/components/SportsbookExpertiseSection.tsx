@@ -21,7 +21,7 @@ const SportsbookExpertiseSection = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
-            15 Years Deep
+            15 Years in iGaming
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
             Work with designers who have lived sportsbook product for 15 years across every vertical.
