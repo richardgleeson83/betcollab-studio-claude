@@ -29,7 +29,7 @@ const fadeUp = (delay = 0) => ({
 });
 
 const HeroSection = () => {
-  const headlineWords = "Your sportsbook deserves world-class design.".split(" ");
+  const headlineWords = "UI Design Retainers for iGaming Operators.".split(" ");
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
