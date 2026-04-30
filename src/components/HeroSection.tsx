@@ -106,7 +106,7 @@ const HeroSection = () => {
             15 years in sports betting
           </span>
           <span className="hidden sm:inline text-border/50">|</span>
-          <span className="hidden sm:inline">30+ years combined experience</span>
+          <span className="hidden sm:inline">30+ years combined design experience</span>
           <span className="hidden sm:inline text-border/50">|</span>
           <span className="hidden sm:inline">Trusted by operators worldwide 🌍</span>
         </motion.div>
