@@ -9,7 +9,7 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Senior-Quality Speed",
+    title: "Senior-level Design",
     description: "Complex sportsbook interfaces delivered in days, not months. No ramp-up time, no learning curve — just immediate impact. ⚡",
   },
   {
