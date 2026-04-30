@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
-import showcaseImage from "@/assets/betcollab-system-2.png";
+import showcaseImage from "@/assets/betcollab-system-2.jpg";
 import FooterSection from "@/components/FooterSection";
 import ComponentShowcase from "@/components/ComponentShowcase";
 
@@ -168,7 +168,7 @@ const DesignSystem = () => {
           <img
             src={showcaseImage}
             alt="betCollab design system themed sportsbook examples showing different partner configurations"
-            className="w-full rounded-2xl border border-border/50"
+            className="w-full border border-border/50 rounded-3xl"
           />
         </motion.div>
       </section>
