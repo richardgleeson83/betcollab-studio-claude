@@ -43,7 +43,7 @@ const HeroSection = () => {
           initial="hidden"
           animate="visible"
         >
-          UI Design Retainers for iGaming Operators
+          Exclusive B2B Design Partner for Sportsbooks
         </motion.p>
 
         <motion.h1
