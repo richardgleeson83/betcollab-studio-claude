@@ -50,8 +50,7 @@ const FeaturesSection = () => {
             <span className="text-gradient-subtle">modern</span> capabilities
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-light leading-relaxed">
-            Everything a scaling sportsbook needs from a design partner —
-            domain expertise, speed, and zero overhead.
+            Most operators are stuck with slow agencies, freelancers who've never seen a bet slip, or junior designers they have to babysit. betCollab is the only senior iGaming design partner with 15 years of industry expertise, Figma mastery, and AI-accelerated workflows that delivers production-ready interfaces in days — not months.
           </p>
         </motion.div>
 
