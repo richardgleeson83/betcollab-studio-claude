@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
-import showcaseImage from "@/assets/betcollab-system-2.jpg";
 import FooterSection from "@/components/FooterSection";
 import ComponentShowcase from "@/components/ComponentShowcase";
+import CTASection from "@/components/CTASection";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -55,25 +55,6 @@ const plans = [
       "https://www.figma.com/design/SU6NOttG4iTdzPWYVXkNDf/betcollab-Pro-Design-System--Demo-?node-id=272-27980&t=lBjx98Ay6Imay9kU-1",
     buyUrl: "https://betcollab.gumroad.com/l/betcollab-pro",
   },
-  {
-    name: "Bespoke",
-    audience: "Fully customised",
-    price: "£4,000+",
-    features: [
-      "Built on shadcn/ui",
-      "Tailwind Ready",
-      "Core Components",
-      "Sportsbook Components",
-      "Figma Variables",
-      "Future Updates",
-    ],
-    highlights: [
-      "Commercial Use* (Multiple)",
-      "Bespoke Themes",
-      "Custom Templates",
-    ],
-    contactUrl: "https://betcollab.com/contact-us/",
-  },
 ];
 
 const capabilities = [
@@ -89,7 +70,7 @@ const DesignSystem = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-28 pb-16 px-6 text-center">
+      <section className="pt-40 pb-16 px-6 text-center">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -97,21 +78,20 @@ const DesignSystem = () => {
           transition={{ duration: 0.7 }}
           className="max-w-3xl mx-auto"
         >
-          <span className="inline-block mb-6 text-sm text-primary border border-primary/20 rounded-full px-4 py-1.5">
+          <span className="inline-block mb-6 text-sm text-primary border border-primary/30 bg-primary/10 rounded-full px-4 py-1.5">
             🎉 betCollab V1.0 now available
           </span>
           <h1 className="text-4xl md:text-6xl font-medium tracking-[-0.035em] text-foreground mb-6">
             The Most Complete Design System for Sportsbooks
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-            The professional Figma design system for sportsbook web and mobile apps, built to help teams create consistent, high-quality betting experiences faster.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+            A complete, out-of-the-box Figma design system for sportsbook web and mobile apps — available independently, with no retainer required. Get started fast and ship a professional betting experience from day one.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="rounded-full"
             >
               <a
                 href="https://www.figma.com/design/SU6NOttG4iTdzPWYVXkNDf/betcollab-Pro-Design-System--Demo-?node-id=272-27980&t=lBjx98Ay6Imay9kU-1"
@@ -121,13 +101,13 @@ const DesignSystem = () => {
                 Preview in Figma
               </a>
             </Button>
-            <Button asChild size="lg" className="rounded-full">
+            <Button asChild size="lg">
               <a
                 href="https://betcollab.gumroad.com/l/betcollab-pro"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Buy Now
+                Buy Pro Version Now
               </a>
             </Button>
           </div>
@@ -145,31 +125,10 @@ const DesignSystem = () => {
           className="max-w-4xl mx-auto text-center"
         >
           <h2 className="text-2xl md:text-3xl font-medium tracking-[-0.035em] text-muted-foreground leading-relaxed">
-            betCollab is built for{" "}
-            <span className="text-foreground">⚽ independent sportsbooks,</span>{" "}
-            <span className="text-foreground">🏢 operators, and 🚀 enterprise platforms,</span>{" "}
-            <span className="text-primary">
-              enabling faster, more consistent betting UX without repetitive design work.
-            </span>
+            The simplest way for operators to get started —{" "}
+            <span className="text-foreground">a complete, ready-to-use design system</span>{" "}
+            built for sportsbooks of every size.
           </h2>
-        </motion.div>
-      </section>
-
-      {/* Showcase Image */}
-      <section className="px-6 py-8">
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.7 }}
-          className="max-w-6xl mx-auto"
-        >
-          <img
-            src={showcaseImage}
-            alt="betCollab design system themed sportsbook examples showing different partner configurations"
-            className="w-full border border-border/50 rounded-3xl"
-          />
         </motion.div>
       </section>
 
@@ -252,7 +211,7 @@ const DesignSystem = () => {
             We have something for designers, teams and operators
           </motion.p>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -290,21 +249,21 @@ const DesignSystem = () => {
 
                 <div className="mt-8 flex gap-3">
                   {plan.previewUrl && (
-                    <Button asChild variant="outline" className="flex-1 rounded-full" size="sm">
+                    <Button asChild variant="outline" className="flex-1" size="sm">
                       <a href={plan.previewUrl} target="_blank" rel="noopener noreferrer">
                         Preview
                       </a>
                     </Button>
                   )}
                   {plan.buyUrl && (
-                    <Button asChild className="flex-1 rounded-full" size="sm">
+                    <Button asChild className="flex-1" size="sm">
                       <a href={plan.buyUrl} target="_blank" rel="noopener noreferrer">
                         Buy Now
                       </a>
                     </Button>
                   )}
                   {plan.contactUrl && (
-                    <Button asChild className="flex-1 rounded-full" size="sm">
+                    <Button asChild className="flex-1" size="sm">
                       <a href={plan.contactUrl} target="_blank" rel="noopener noreferrer">
                         Get in touch!
                       </a>
@@ -322,6 +281,7 @@ const DesignSystem = () => {
       </section>
 
 
+      <CTASection />
       <FooterSection />
     </div>
   );

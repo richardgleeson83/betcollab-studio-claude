@@ -7,22 +7,47 @@ import { Textarea } from "@/components/ui/textarea";
 
 const benefits = [
   "Figma expertise",
-  "Dedicated account manager",
-  "Launch in under 4 weeks",
-  "Full design system included",
+  "Senior iGaming expertise from day one",
+  "AI-accelerated delivery",
+  "Scales to match your output",
+  "No hiring, no ramp-up",
 ];
 
 const CTASection = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError(false);
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "6aabf877-7862-4e06-b14b-7279cf6dbd89",
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <section className="relative px-6 py-24 md:py-32">
+    <section id="contact" className="relative px-6 py-24 md:py-32">
       
 
       <div className="relative max-w-6xl mx-auto">
@@ -40,7 +65,7 @@ const CTASection = () => {
               <span className="text-primary">iGaming experience?</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 max-w-md font-light leading-relaxed">
-              Get in touch and we'll show you how betCollab can transform your platform.
+              Book a strategy call. We'll walk through your platform, identify the biggest design opportunities, and show you exactly how betCollab can move your product forward.
             </p>
             <ul className="space-y-3">
               {benefits.map((b) => (
@@ -113,8 +138,16 @@ const CTASection = () => {
                     className="bg-background border-border resize-none"
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full gap-2">
-                  Get in touch <ArrowRight className="h-4 w-4" />
+                {error && (
+                  <p className="text-sm text-destructive text-center">
+                    Something went wrong. Please try again or email us directly at{" "}
+                    <a href="mailto:hello@betcollab.com" className="underline">
+                      hello@betcollab.com
+                    </a>
+                  </p>
+                )}
+                <Button type="submit" size="lg" className="w-full gap-2" disabled={loading}>
+                  {loading ? "Sending…" : (<>Get in touch <ArrowRight className="h-4 w-4" /></>)}
                 </Button>
               </form>
             )}

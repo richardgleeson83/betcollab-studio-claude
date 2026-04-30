@@ -32,19 +32,21 @@ const HeroSection = () => {
   const headlineWords = "Design Retainers for iGaming Operators.".split(" ");
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative flex items-center justify-center overflow-hidden">
       {/* Subtle radial glow */}
-      
-      
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center py-32">
-        <motion.p
-          className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-10 font-light"
+
+
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-40 pb-24">
+        <motion.div
+          className="mb-10"
           variants={fadeUp(0)}
           initial="hidden"
           animate="visible"
         >
-          Senior Design Retainer for iGaming and Sportsbook Operators
-        </motion.p>
+          <span className="inline-block text-sm text-primary border border-primary/30 bg-primary/10 rounded-full px-4 py-1.5">
+            🏆 Senior-level experience for iGaming and Sportsbook Operators
+          </span>
+        </motion.div>
 
         <motion.h1
           className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.08] tracking-[-0.035em] font-medium mb-8"
@@ -56,8 +58,7 @@ const HeroSection = () => {
             <motion.span
               key={i}
               variants={wordChild}
-              className="inline-block mr-[0.3em] text-primary"
-              
+              className={`inline-block mr-[0.3em] ${i >= 3 ? "text-primary" : "text-foreground"}`}
             >
               {word}
             </motion.span>
@@ -68,13 +69,13 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-14 leading-relaxed font-light"
+          className="text-lg md:text-xl max-w-2xl mx-auto mb-14 leading-relaxed" style={{ color: '#c9d1d9' }}
           variants={fadeUp(0.5)}
           initial="hidden"
           animate="visible"
         >
           Senior-quality design on a flexible monthly retainer.
-          No hiring. No overhead. Just premium output — delivered in days, not months. ⚡
+          No hiring. No overhead. Just premium output ⚡
         </motion.p>
 
         <motion.div
@@ -85,28 +86,35 @@ const HeroSection = () => {
         >
           <Button
             size="lg"
-            className="bg-primary text-background text-sm px-7 py-6 rounded-full font-medium tracking-[-0.01em]"
+            className="gap-2"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Book a call
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="h-4 w-4" />
           </Button>
         </motion.div>
 
         <motion.div
-          className="mt-24 flex items-center justify-center gap-8 text-muted-foreground text-sm font-light"
+          className="mt-24 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm"
           variants={fadeUp(0.9)}
           initial="hidden"
           animate="visible"
         >
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            15 years in sports betting
+            <span className="font-semibold text-foreground">15 years</span>
+            <span className="text-muted-foreground font-light">in sports betting</span>
           </span>
           <span className="hidden sm:inline text-border/50">|</span>
-          <span className="hidden sm:inline">30+ years combined design experience</span>
+          <span className="flex items-center gap-2">
+            <span className="font-semibold text-foreground">30+ years</span>
+            <span className="text-muted-foreground font-light">combined design experience</span>
+          </span>
           <span className="hidden sm:inline text-border/50">|</span>
-          <span className="hidden sm:inline">Trusted by operators worldwide 🌍</span>
+          <span className="flex items-center gap-2">
+            <span className="font-semibold text-foreground">Trusted</span>
+            <span className="text-muted-foreground font-light">by operators worldwide 🌍</span>
+          </span>
         </motion.div>
       </div>
 

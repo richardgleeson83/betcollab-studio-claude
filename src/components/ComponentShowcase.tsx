@@ -33,37 +33,39 @@ const CardItem = ({ src, alt, delay }: { src: string; alt: string; delay: number
   </motion.div>
 );
 
-const ComponentShowcase = () => {
+const ComponentShowcase = ({ hideHeader = false }: { hideHeader?: boolean }) => {
   return (
     <section className="px-6 py-20 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-sm text-primary mb-3 text-center"
-        >
-          🧩 Component Library
-        </motion.p>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground text-center mb-4"
-        >
-          Everything you need, ready to ship
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto"
-        >
-          From sidebars and event grids to bet builders and accumulators — every component your sportsbook needs.
-        </motion.p>
+        {!hideHeader && <>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6 text-center"
+          >
+            🧩 Component Library
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground text-center mb-4"
+          >
+            Everything you need, ready to ship
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto"
+          >
+            From sidebars and event grids to bet builders and accumulators — every component your sportsbook needs.
+          </motion.p>
+        </>}
 
         {/* Three-column grid: left stack | center hero | right stack */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] gap-5 items-center max-w-5xl mx-auto">

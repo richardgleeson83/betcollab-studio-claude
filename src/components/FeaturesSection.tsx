@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Zap, Users, Palette, Clock, Shield, Layers } from "lucide-react";
+import { Zap, Users, Palette, Clock, Shield, Globe } from "lucide-react";
 
 const features = [
   {
@@ -9,8 +9,8 @@ const features = [
   },
   {
     icon: Zap,
-    title: "Senior-level Impact",
-    description: "Complex sportsbook interfaces delivered in days, not months. No ramp-up time, no learning curve — just immediate impact. ⚡",
+    title: "AI-Accelerated Delivery",
+    description: "We use AI tools to move faster than any traditional design team — without sacrificing quality. Senior quality, accelerated pace.",
   },
   {
     icon: Users,
@@ -28,15 +28,15 @@ const features = [
     description: "UI/UX as your market differentiator. We craft the interface that makes your platform stand apart from every other operator. 🛡️",
   },
   {
-    icon: Layers,
-    title: "Design Expertise",
-    description: "Figma mastery, and AI-accelerated workflows that delivers production-ready interfaces. 🚀",
+    icon: Globe,
+    title: "Built to Scale",
+    description: "Through deep global connections across design, development, and product, we assemble the right team for your brief — at whatever scale you need.",
   },
 ];
 
 const FeaturesSection = () => {
   return (
-    <section className="relative py-32 px-6">
+    <section className="relative px-6 py-24 md:py-32">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-20"
@@ -45,11 +45,13 @@ const FeaturesSection = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.035em] font-medium mb-6">
-            Amplified with{" "}
-            <span className="text-gradient-subtle">modern</span> capabilities
+          <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
+            Why betCollab
+          </p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.035em] font-medium mb-6 text-balance">
+            Senior expertise. Modern tooling. Real results.
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Most operators are stuck with slow agencies, freelancers who've never seen a bet slip, or junior designers they have to babysit. betCollab is the only senior iGaming design partner with 15 years of industry expertise, Figma mastery, and AI-accelerated workflows that delivers production-ready interfaces in days — not months.
           </p>
         </motion.div>

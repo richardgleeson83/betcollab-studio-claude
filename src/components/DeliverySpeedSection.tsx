@@ -2,10 +2,19 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const timeline = [
-  { day: "DAY 1", label: "Monday — Brief received" },
-  { day: "DAY 3", label: "Wednesday — First Figma designs" },
-  { day: "DAY 5", label: "Friday — Dev-ready components" },
+const steps = [
+  {
+    step: "STEP 1",
+    title: "Book a Discovery Call",
+    description:
+      "We understand your platform, your roadmap, and your most pressing design challenges.",
+  },
+  {
+    step: "STEP 2",
+    title: "Ship Features, Every Week",
+    description:
+      "Production-ready Figma designs delivered to your roadmap. Your priorities, your pace. Senior iGaming quality, AI-accelerated delivery.",
+  },
 ];
 
 const DeliverySpeedSection = () => {
@@ -20,16 +29,16 @@ const DeliverySpeedSection = () => {
           transition={{ duration: 0.7 }}
         >
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
-            72-Hour Delivery, Every Time
+            AI-Accelerated Delivery
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
-            Get <span className="text-gradient-subtle">production-ready</span> iGaming design in <span className="text-gradient-subtle">days</span>. No onboarding. No ramp-up. No waiting.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
+            Get production-ready iGaming design in days. No onboarding. No ramp-up. No waiting.
           </h2>
-          <p className="text-muted-foreground text-lg font-light leading-relaxed mb-6">
+          <p className="text-muted-foreground text-lg leading-relaxed mb-6">
             We've been designing sportsbook and casino interfaces for 15 years. Add AI-enhanced workflows and you get a design partner that moves faster than any traditional agency or in-house team.
           </p>
-          <p className="text-muted-foreground text-lg font-light leading-relaxed mb-10">
-            Brief us on Monday and your first Figma designs land by Wednesday. Production-ready components by Friday. No discovery phases. No "just to confirm" emails. No agency politics. Just a designer who already knows your product and ships accordingly.
+          <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+            Just a team who know your product and ships accordingly.
           </p>
           <Button
             size="lg"
@@ -48,40 +57,20 @@ const DeliverySpeedSection = () => {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="rounded-2xl border border-border/50 bg-card p-8"
         >
-          <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
-            AI-Accelerated Delivery
-          </p>
           <div className="space-y-3">
-            {timeline.map((t) => (
+            {steps.map((s) => (
               <div
-                key={t.day}
-                className="flex items-center justify-between rounded-xl border border-border/50 bg-background px-5 py-4"
+                key={s.step}
+                className="rounded-xl border border-border/50 bg-background p-5"
               >
-                <span className="text-muted-foreground text-sm font-light">
-                  {t.label}
-                </span>
-                <span className="text-xs font-medium tracking-[0.15em] text-primary bg-primary/[0.08] border border-primary/20 rounded-md px-2.5 py-1">
-                  {t.day}
-                </span>
+                <h3 className="text-base font-medium tracking-[-0.01em] text-foreground mb-2">
+                  {s.title}
+                </h3>
+                <p className="text-muted-foreground text-sm font-light leading-relaxed">
+                  {s.description}
+                </p>
               </div>
             ))}
-          </div>
-          <div className="mt-3 rounded-xl border border-border/50 bg-background p-5">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-base font-medium tracking-[-0.01em] text-foreground">
-                Live Betting Redesign
-              </h3>
-              <span className="text-xs font-medium tracking-[0.15em] text-primary bg-primary/[0.08] border border-primary/20 rounded-md px-2.5 py-1">
-                DONE
-              </span>
-            </div>
-            <div className="space-y-2 mb-3">
-              <div className="h-1.5 rounded-full bg-muted/60 w-full" />
-              <div className="h-1.5 rounded-full bg-muted/60 w-3/4" />
-            </div>
-            <p className="text-primary text-sm font-light">
-              Delivered in 3 weeks ✓
-            </p>
           </div>
         </motion.div>
       </div>

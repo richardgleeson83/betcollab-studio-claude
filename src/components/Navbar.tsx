@@ -1,8 +1,14 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/betcollab-logo.svg";
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const closeMobile = () => setMobileOpen(false);
+
   return (
     <motion.nav
       className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-background/70 backdrop-blur-xl"
@@ -11,12 +17,61 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: [0.25, 0.4, 0.25, 1] }}
     >
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-        <Link to="/"><img src={logo} alt="betCollab" className="h-5" /></Link>
+        <Link to="/" onClick={() => { closeMobile(); window.scrollTo(0, 0); }}>
+          <img src={logo} alt="betCollab" className="h-5" />
+        </Link>
+
+        {/* Desktop nav */}
         <div className="hidden sm:flex items-center gap-7 text-sm text-muted-foreground">
-          <Link to="/" className="hover:text-foreground transition-colors duration-200">Home</Link>
-          <Link to="/design-system" className="hover:text-foreground transition-colors duration-200">Design System</Link>
+          <Link to="/" className="hover:text-foreground transition-colors duration-200" onClick={() => window.scrollTo(0, 0)}>Home</Link>
+          <Link to="/design-system" className="hover:text-foreground transition-colors duration-200" onClick={() => window.scrollTo(0, 0)}>Design System</Link>
+          <Button asChild size="sm">
+            <a href="#contact">Get in touch</a>
+          </Button>
         </div>
+
+        {/* Mobile hamburger */}
+        <button
+          className="sm:hidden flex items-center justify-center w-9 h-9 text-muted-foreground hover:text-foreground transition-colors"
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        >
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: [0.25, 0.4, 0.25, 1] }}
+            className="sm:hidden overflow-hidden border-t border-border/40 bg-background/95 backdrop-blur-xl"
+          >
+            <div className="px-6 py-5 flex flex-col gap-4 text-sm">
+              <Link
+                to="/"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                onClick={() => { closeMobile(); window.scrollTo(0, 0); }}
+              >
+                Home
+              </Link>
+              <Link
+                to="/design-system"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                onClick={() => { closeMobile(); window.scrollTo(0, 0); }}
+              >
+                Design System
+              </Link>
+              <Button asChild size="sm" className="w-full" onClick={closeMobile}>
+                <a href="#contact" onClick={closeMobile}>Get in touch</a>
+              </Button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

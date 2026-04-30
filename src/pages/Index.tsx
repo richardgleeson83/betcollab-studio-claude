@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import ComponentShowcase from "@/components/ComponentShowcase";
+import SoundFamiliarSection from "@/components/SoundFamiliarSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import ShowcaseSection from "@/components/ShowcaseSection";
-import SocialProofSection from "@/components/SocialProofSection";
 import SportsbookExpertiseSection from "@/components/SportsbookExpertiseSection";
 import SkipHiringSection from "@/components/SkipHiringSection";
 import DeliverySpeedSection from "@/components/DeliverySpeedSection";
@@ -14,15 +15,14 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <div id="features">
-        <FeaturesSection />
-      </div>
-      <ShowcaseSection />
+      <ComponentShowcase hideHeader />
+      <SoundFamiliarSection />
       <SportsbookExpertiseSection />
+      <ShowcaseSection />
       <DeliverySpeedSection />
       <SkipHiringSection />
-      <div id="proof">
-        <SocialProofSection />
+      <div id="features">
+        <FeaturesSection />
       </div>
       <div id="contact">
         <CTASection />

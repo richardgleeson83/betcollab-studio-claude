@@ -66,14 +66,14 @@ const SkipHiringSection = () => {
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
             No headcount. No overhead.
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
-            Skip the <span className="text-gradient-subtle">hiring process</span> and get senior design output without the <span className="text-gradient-subtle">permanent headcount</span>.
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
+            Skip the hiring process and get senior design output without the permanent headcount.
           </h2>
           <p className="text-muted-foreground text-lg font-light leading-relaxed mb-6">
             No job ads. No interviews. No salary negotiations. No sick days or holiday cover to manage. No performance reviews.
           </p>
           <p className="text-muted-foreground text-lg font-light leading-relaxed mb-10">
-            Just a dedicated senior designer embedded in your product team, working to your roadmap, scaling up or down as you need.
+            Just senior level design, scaling up or down as you need.
           </p>
           <Button
             size="lg"
