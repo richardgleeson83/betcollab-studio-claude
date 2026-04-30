@@ -67,7 +67,7 @@ const SkipHiringSection = () => {
             No headcount. No overhead.
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
-            Skip the hiring process and get senior design output without the permanent headcount.
+            Skip the <span className="text-gradient-subtle">hiring process</span> and get senior design output without the <span className="text-gradient-subtle">permanent headcount</span>.
           </h2>
           <p className="text-muted-foreground text-lg font-light leading-relaxed mb-6">
             No job ads. No interviews. No salary negotiations. No sick days or holiday cover to manage. No performance reviews.

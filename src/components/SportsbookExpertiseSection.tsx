@@ -24,7 +24,7 @@ const SportsbookExpertiseSection = () => {
             15 Years in iGaming
           </p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
-            Work with designers who have lived sportsbook product for 15 years across every vertical.
+            Work with designers who have <span className="text-gradient-subtle">lived sportsbook product</span> for 15 years across <span className="text-gradient-subtle">every vertical</span>.
           </h2>
           <p className="text-muted-foreground text-lg font-light leading-relaxed mb-6">
             From pre-match markets to in-play betting, from retail terminals to native mobile, from white-label platforms to fully proprietary builds.
