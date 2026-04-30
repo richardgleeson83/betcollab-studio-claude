@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import showcaseImage from "@/assets/betcollab-system.png";
+import showcaseImage from "@/assets/betcollab-system.jpg";
 
 const ShowcaseSection = () => {
   return (
