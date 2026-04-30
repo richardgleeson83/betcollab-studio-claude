@@ -57,7 +57,7 @@ const HeroSection = () => {
               key={i}
               variants={wordChild}
               className="inline-block mr-[0.3em] text-primary"
-              style={word === "world-class" ? { fontStyle: "italic" } : {}}
+              
             >
               {word}
             </motion.span>
