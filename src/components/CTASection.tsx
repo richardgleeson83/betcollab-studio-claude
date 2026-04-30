@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 const benefits = [
-  "No long-term contracts",
+  "Figma expertise",
   "Dedicated account manager",
   "Launch in under 4 weeks",
   "Full design system included",
