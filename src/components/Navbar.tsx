@@ -13,6 +13,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link to="/"><img src={logo} alt="betCollab" className="h-5" /></Link>
         <div className="hidden sm:flex items-center gap-7 text-sm text-muted-foreground">
+          <Link to="/" className="hover:text-foreground transition-colors duration-200">Home</Link>
           <Link to="/design-system" className="hover:text-foreground transition-colors duration-200">Design System</Link>
         </div>
       </div>
