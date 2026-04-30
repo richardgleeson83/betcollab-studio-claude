@@ -32,6 +32,7 @@ const CTASection = () => {
           name: form.name,
           email: form.email,
           message: form.message,
+          botcheck: "",
         }),
       });
       if (res.ok) {
@@ -146,6 +147,7 @@ const CTASection = () => {
                     </a>
                   </p>
                 )}
+                <input type="checkbox" name="botcheck" className="hidden" aria-hidden="true" tabIndex={-1} />
                 <Button type="submit" size="lg" className="w-full gap-2" disabled={loading}>
                   {loading ? "Sending…" : (<>Get in touch <ArrowRight className="h-4 w-4" /></>)}
                 </Button>
