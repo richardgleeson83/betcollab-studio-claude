@@ -18,7 +18,7 @@ const ShowcaseSection = () => {
           <img
             src={showcaseImage}
             alt="betCollab sportsbook design system"
-            className="w-full h-auto block rounded-3xl"
+            className="w-full h-auto block rounded-none"
             loading="lazy"
           />
         </div>
