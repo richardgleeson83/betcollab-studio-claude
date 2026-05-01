@@ -52,7 +52,7 @@ const ComponentShowcase = ({ hideHeader = false }: { hideHeader?: boolean }) => 
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground text-center mb-4"
+            className="text-3xl md:text-4xl font-medium text-foreground text-center mb-4"
           >
             Everything you need, ready to ship
           </motion.h2>

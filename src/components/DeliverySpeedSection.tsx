@@ -31,7 +31,7 @@ const DeliverySpeedSection = () => {
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
             AI-Accelerated Delivery
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.1] font-medium text-foreground mb-8">
             Get production-ready iGaming design in days. No onboarding. No ramp-up. No waiting.
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed mb-6">

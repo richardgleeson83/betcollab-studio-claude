@@ -48,8 +48,8 @@ const FeaturesSection = () => {
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
             Why betCollab
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.035em] font-medium mb-6 text-balance">
-            Senior expertise. Modern tooling. Real results.
+          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.1] font-medium mb-6 text-balance">
+            Senior expertise. Modern tooling. <span className="text-primary">Real results.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
             Most operators are stuck with slow agencies, freelancers who've never seen a bet slip, or junior designers they have to babysit. betCollab is the only senior iGaming design partner with 15 years of industry expertise, Figma mastery, and AI-accelerated workflows that delivers production-ready interfaces in days — not months.

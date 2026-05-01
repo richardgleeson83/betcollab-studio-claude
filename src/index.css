@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -37,6 +37,7 @@
     --radius: 0.75rem;
 
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', system-ui, sans-serif;
+    --font-heading: 'DM Sans', system-ui, sans-serif;
 
     --grid-color: 225 8% 9%;       /* +2pp grid lines */
   }
@@ -55,7 +56,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-body);
+    font-family: var(--font-heading);
     letter-spacing: -0.03em;
   }
 }

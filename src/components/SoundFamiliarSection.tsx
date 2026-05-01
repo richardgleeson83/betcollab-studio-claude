@@ -29,10 +29,10 @@ const SoundFamiliarSection = () => {
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
             Sound familiar?
           </p>
-          <h2 className="text-4xl sm:text-5xl md:text-[3.25rem] leading-[1.1] tracking-[-0.03em] font-medium">
+          <h2 className="text-4xl sm:text-5xl md:text-[3.25rem] leading-[1.15] font-medium">
             You've tried the obvious options.
             <br />
-            <span className="text-muted-foreground">None of them worked.</span>
+            <span className="text-muted-foreground italic">None of them worked.</span>
           </h2>
         </motion.div>
 

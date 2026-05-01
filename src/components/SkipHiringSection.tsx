@@ -66,7 +66,7 @@ const SkipHiringSection = () => {
           <p className="text-xs font-medium tracking-[0.2em] text-primary uppercase mb-6">
             No headcount. No overhead.
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.05] tracking-[-0.035em] font-medium text-foreground mb-8">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.1] font-medium text-foreground mb-8">
             Skip the hiring process and get senior design output without the permanent headcount.
           </h2>
           <p className="text-muted-foreground text-lg font-light leading-relaxed mb-6">

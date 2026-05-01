@@ -38,7 +38,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-28 md:pt-40 pb-16 md:pb-24">
 <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.18] md:leading-[1.08] tracking-[-0.035em] font-medium mb-8"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.18] md:leading-[1.1] font-medium mb-8"
           variants={wordReveal}
           initial="hidden"
           animate="visible"

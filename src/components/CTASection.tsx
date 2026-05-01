@@ -60,7 +60,7 @@ const CTASection = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.7 }}
           >
-            <h2 className="text-3xl md:text-4xl font-medium tracking-[-0.035em] text-foreground mb-4">
+            <h2 className="text-3xl md:text-4xl font-medium text-foreground mb-4">
               Ready to elevate your
               <br />
               <span className="text-primary">iGaming experience?</span>

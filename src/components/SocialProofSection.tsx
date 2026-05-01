@@ -44,7 +44,7 @@ const SocialProofSection = () => {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.08] tracking-[-0.035em] font-medium mb-6">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl leading-[1.1] font-medium mb-6">
             Trusted by <span className="text-gradient-subtle">iGaming</span> operators
           </h2>
         </motion.div>
