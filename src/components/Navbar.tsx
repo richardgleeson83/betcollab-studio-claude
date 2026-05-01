@@ -32,7 +32,7 @@ const Navbar = () => {
 
         {/* Mobile hamburger */}
         <button
-          className="sm:hidden flex items-center justify-center w-9 h-9 text-muted-foreground hover:text-foreground transition-colors"
+          className="sm:hidden flex items-center justify-center w-11 h-11 text-foreground hover:text-primary transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
@@ -48,26 +48,28 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.25, 0.4, 0.25, 1] }}
-            className="sm:hidden overflow-hidden border-t border-border/40 bg-background/95 backdrop-blur-xl"
+            className="sm:hidden overflow-hidden border-t border-border bg-background"
           >
-            <div className="px-6 py-5 flex flex-col gap-4 text-sm">
+            <div className="px-6 py-4 flex flex-col">
               <Link
                 to="/"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="flex items-center py-4 text-base font-medium text-foreground hover:text-primary transition-colors duration-200 border-b border-border/50"
                 onClick={() => { closeMobile(); window.scrollTo(0, 0); }}
               >
                 Home
               </Link>
               <Link
                 to="/design-system"
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                className="flex items-center py-4 text-base font-medium text-foreground hover:text-primary transition-colors duration-200 border-b border-border/50"
                 onClick={() => { closeMobile(); window.scrollTo(0, 0); }}
               >
                 Design System
               </Link>
-              <Button asChild size="sm" className="w-full" onClick={closeMobile}>
-                <a href="#contact" onClick={closeMobile}>Get in touch</a>
-              </Button>
+              <div className="pt-4 pb-2">
+                <Button asChild size="default" className="w-full" onClick={closeMobile}>
+                  <a href="#contact" onClick={closeMobile}>Get in touch</a>
+                </Button>
+              </div>
             </div>
           </motion.div>
         )}
