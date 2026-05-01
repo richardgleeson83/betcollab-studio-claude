@@ -84,26 +84,30 @@ const HeroSection = () => {
         </motion.div>
 
         <motion.div
-          className="mt-24 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm"
+          className="mt-16 flex justify-center"
           variants={fadeUp(0.9)}
           initial="hidden"
           animate="visible"
         >
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-            <span className="font-semibold text-foreground">15 years</span>
-            <span className="text-muted-foreground font-light">in sports betting</span>
-          </span>
-          <span className="hidden sm:inline text-border/50">|</span>
-          <span className="flex items-center gap-2">
-            <span className="font-semibold text-foreground">30+ years</span>
-            <span className="text-muted-foreground font-light">combined design experience</span>
-          </span>
-          <span className="hidden sm:inline text-border/50">|</span>
-          <span className="flex items-center gap-2">
-            <span className="font-semibold text-foreground">Trusted</span>
-            <span className="text-muted-foreground font-light">by operators worldwide 🌍</span>
-          </span>
+          <div className="inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm px-6 py-3 rounded-full border border-border/40 bg-white/[0.03] backdrop-blur-sm">
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span className="font-semibold text-foreground">15 years</span>
+              <span className="text-muted-foreground font-light">in sports betting</span>
+            </span>
+            <span className="hidden sm:inline text-border/40">|</span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span className="font-semibold text-foreground">30+ years</span>
+              <span className="text-muted-foreground font-light">combined design experience</span>
+            </span>
+            <span className="hidden sm:inline text-border/40">|</span>
+            <span className="flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+              <span className="font-semibold text-foreground">Trusted</span>
+              <span className="text-muted-foreground font-light">by operators worldwide 🌍</span>
+            </span>
+          </div>
         </motion.div>
       </div>
 

@@ -35,7 +35,7 @@ const CardItem = ({ src, alt, delay }: { src: string; alt: string; delay: number
 
 const ComponentShowcase = ({ hideHeader = false }: { hideHeader?: boolean }) => {
   return (
-    <section className="px-6 py-20 overflow-hidden">
+    <section className="px-6 pt-8 pb-20 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {!hideHeader && <>
           <motion.p
