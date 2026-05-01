@@ -36,20 +36,9 @@ const HeroSection = () => {
       {/* Subtle radial glow */}
 
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-40 pb-24">
-        <motion.div
-          className="mb-10"
-          variants={fadeUp(0)}
-          initial="hidden"
-          animate="visible"
-        >
-          <span className="inline-block text-sm text-primary border border-primary/30 bg-primary/10 rounded-full px-4 py-1.5">
-            🏆 Senior-level experience for iGaming and Sportsbook Operators
-          </span>
-        </motion.div>
-
-        <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.08] tracking-[-0.035em] font-medium mb-8"
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center pt-28 md:pt-40 pb-16 md:pb-24">
+<motion.h1
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.2rem] leading-[1.18] md:leading-[1.08] tracking-[-0.035em] font-medium mb-8"
           variants={wordReveal}
           initial="hidden"
           animate="visible"
@@ -74,7 +63,7 @@ const HeroSection = () => {
           initial="hidden"
           animate="visible"
         >
-          Senior-quality design on a flexible monthly retainer.
+          Senior-level design on a flexible monthly retainer.
           No hiring. No overhead. Just premium output ⚡
         </motion.p>
 

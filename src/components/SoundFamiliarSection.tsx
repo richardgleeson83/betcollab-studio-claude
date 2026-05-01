@@ -17,7 +17,7 @@ const problems = [
 
 const SoundFamiliarSection = () => {
   return (
-    <section className="relative px-6 py-24 md:py-32 border-t border-border/40">
+    <section className="relative px-6 py-16 md:py-32 border-t border-border/40">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

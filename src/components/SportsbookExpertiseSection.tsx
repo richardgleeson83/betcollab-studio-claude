@@ -13,7 +13,7 @@ const verticals = [
 
 const SportsbookExpertiseSection = () => {
   return (
-    <section className="relative px-6 py-24 md:py-32">
+    <section className="relative px-6 py-16 md:py-32">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         {/* Left — copy */}
         <motion.div

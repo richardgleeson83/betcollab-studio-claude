@@ -3,7 +3,7 @@ import showcaseImage from "@/assets/betcollab-system.jpg";
 
 const ShowcaseSection = () => {
   return (
-    <section className="relative px-6 pt-4 pb-24 md:pb-32">
+    <section className="relative px-6 pt-4 pb-16 md:pb-32">
       {/* Subtle top glow matching Linear's style */}
       
 

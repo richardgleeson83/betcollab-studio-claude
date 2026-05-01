@@ -48,7 +48,7 @@ const CTASection = () => {
   };
 
   return (
-    <section id="contact" className="relative px-6 py-24 md:py-32">
+    <section id="contact" className="relative px-6 py-16 md:py-32">
       
 
       <div className="relative max-w-6xl mx-auto">

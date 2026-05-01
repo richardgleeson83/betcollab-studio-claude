@@ -87,11 +87,12 @@ const DesignSystem = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
             A complete, out-of-the-box Figma design system for sportsbook web and mobile apps — available independently, with no retainer required. Get started fast and ship a professional betting experience from day one.
           </p>
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button
               asChild
               variant="outline"
               size="lg"
+              className="w-full sm:w-auto"
             >
               <a
                 href="https://www.figma.com/design/SU6NOttG4iTdzPWYVXkNDf/betcollab-Pro-Design-System--Demo-?node-id=272-27980&t=lBjx98Ay6Imay9kU-1"
@@ -101,7 +102,7 @@ const DesignSystem = () => {
                 Preview in Figma
               </a>
             </Button>
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <a
                 href="https://betcollab.gumroad.com/l/betcollab-pro"
                 target="_blank"

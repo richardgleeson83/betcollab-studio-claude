@@ -35,7 +35,7 @@ const counterVariants = {
 
 const SocialProofSection = () => {
   return (
-    <section className="relative py-32 px-6">
+    <section className="relative py-16 md:py-32 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           className="text-center mb-20"
